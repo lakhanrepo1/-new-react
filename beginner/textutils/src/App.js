@@ -6,7 +6,7 @@ function App() {
   return (
    <>
    <nav>
-   <li>Home</li>
+   <li>Home1</li>
    <li>About</li>
    <li>Contact</li>
    </nav>

@@ -1,16 +1,42 @@
 // import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-
+import Alert from './components/Alert';
+//Upto-Video : 13
 
 function App() {
+  const [mode, setMode] = useState('light');
+  const [alert,setAlert] = useState(null);
+  
+  const showAlert=(message,type)=>{
+    setAlert({
+      msg:message,
+      type:type
+    })
+    setTimeout(()=>{
+      setAlert(null);
+    },1500)
+  }
+  const toggleMode = () => {
+    if(mode === 'light'){
+      setMode('dark');
+      document.body.style.backgroundColor = '#081d33';
+      showAlert("Dark mode has been enabled","success");
+    } else {
+      setMode('light');
+      document.body.style.backgroundColor = 'white';
+      showAlert("Light mode has been enabled","success");
+    }
+  };
   return (
-   <>
-  <Navbar title="TextUtils" aboutTextutils="About TextUtils" />
+   <> 
+  <Navbar title="TextUtils" aboutTextutils="About TextUtils " mode={mode} toggleMode={toggleMode}/>
+  <Alert alert={alert}/>
   <div className="container">
-    <TextForm heading="Enter text to analyze below"/>
+    <TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode}/>
     {/* <About /> */}
   </div>
 

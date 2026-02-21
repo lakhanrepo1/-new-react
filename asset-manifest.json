@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/lakhanrepo1/-new-react/tree/main/beginner/textutils/static/css/main.dc4d6ff2.css",
-    "main.js": "/lakhanrepo1/-new-react/tree/main/beginner/textutils/static/js/main.c4285644.js",
-    "static/js/453.0547c99f.chunk.js": "/lakhanrepo1/-new-react/tree/main/beginner/textutils/static/js/453.0547c99f.chunk.js",
-    "index.html": "/lakhanrepo1/-new-react/tree/main/beginner/textutils/index.html",
-    "main.dc4d6ff2.css.map": "/lakhanrepo1/-new-react/tree/main/beginner/textutils/static/css/main.dc4d6ff2.css.map",
-    "main.c4285644.js.map": "/lakhanrepo1/-new-react/tree/main/beginner/textutils/static/js/main.c4285644.js.map",
-    "453.0547c99f.chunk.js.map": "/lakhanrepo1/-new-react/tree/main/beginner/textutils/static/js/453.0547c99f.chunk.js.map"
+    "main.css": "/-new-react/static/css/main.dc4d6ff2.css",
+    "main.js": "/-new-react/static/js/main.2c2ab4f6.js",
+    "static/js/453.0547c99f.chunk.js": "/-new-react/static/js/453.0547c99f.chunk.js",
+    "index.html": "/-new-react/index.html",
+    "main.dc4d6ff2.css.map": "/-new-react/static/css/main.dc4d6ff2.css.map",
+    "main.2c2ab4f6.js.map": "/-new-react/static/js/main.2c2ab4f6.js.map",
+    "453.0547c99f.chunk.js.map": "/-new-react/static/js/453.0547c99f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dc4d6ff2.css",
-    "static/js/main.c4285644.js"
+    "static/js/main.2c2ab4f6.js"
   ]
 }

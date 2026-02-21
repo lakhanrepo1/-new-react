@@ -6,6 +6,12 @@ import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 //Upto-Video : 13
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   // Link,
+//   Routes
+// } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -33,13 +39,18 @@ function App() {
   };
   return (
    <> 
+  {/* <Router> */}
   <Navbar title="TextUtils" aboutTextutils="About TextUtils " mode={mode} toggleMode={toggleMode}/>
   <Alert alert={alert}/>
   <div className="container">
-    <TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode}/>
-    {/* <About /> */}
+       {/* <Routes> */}
+         {/* <Route exact path="/about" element={<About />} /> */}
+          {/* <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode}/>}>   */}
+          <TextForm showAlert={showAlert} heading="Enter text to analyze below" mode={mode}/>
+          {/* </Route> */}
+        {/* </Routes> */}
   </div>
-
+  {/* </Router> */}
    </>
   );
 }

@@ -1,64 +1,40 @@
-import React,{useState} from "react";
+// import React,{useState} from "react";
 
-export default function About() {
-    
-const [myStyle, setMyStyle] = useState({
-    color: "#212529",
-    backgroundColor: "white",
-    border: "1px solid #212529",
-  });
+export default function About(props) {
+   
   
-const [btnText, setBtnText] = useState("Enable dark mode");
-const toggleStyle=()=>{
-  if(myStyle.color==="#212529"){
-    setMyStyle({
-      color: "white",
-      backgroundColor: "#212529",
-      border: "1px solid white",
-    })
-       setBtnText("Enable light mode");  
-  }
-  else{
-    setMyStyle({
-      color: "#212529",
-      backgroundColor: "white",
-      border: "1px solid #212529",
-    })
-         setBtnText("Enable dark mode");
-  }
-}
+// --------------------------Dark mode toggle for about us page------------------
+let myStyle={
+  color: props.mode==='dark'?'white':'#042743',
+  backgroundColor: props.mode==='dark'?'rgb(36 74 104)':'white'
+ }
   return (
-    <div className="container" style={myStyle}>
+    <div className="container" style={{color: props.mode==='dark'?'white':'#042743',}}>
         <h1 className="my-3"> About Us</h1>
       <div className="accordion" id="accordionExample" >
         <div className="accordion-item" >
-          <h2 className="accordion-header">
+          <h2 className="accordion-header" id="headingOne">
             <button
               className="accordion-button"
               type="button"
+              style={myStyle}
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
               aria-expanded="true"
               aria-controls="collapseOne"
-              style={myStyle}
+          
             >
-              Accordion Item #1
+              <strong>Analyze your text </strong>
             </button>
           </h2>
           <div
             id="collapseOne"
             className="accordion-collapse collapse show"
             data-bs-parent="#accordionExample"
+            aria-labelledby="headingOne"
           >
             <div className="accordion-body" style={myStyle}>
-              <strong>This is the first item’s accordion body.</strong> It is
-              shown by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+            This gives you a way to analyze your text quickly and efficiently. Be it word count, character count or time to read, TextUtils gives you all the information about your text.
             </div>
           </div>
         </div>
@@ -73,23 +49,17 @@ const toggleStyle=()=>{
               aria-controls="collapseTwo"
               style={myStyle}
             >
-              Accordion Item #2
+              <strong>Free to use</strong>
             </button>
           </h2>
           <div
             id="collapseTwo"
             className="accordion-collapse collapse"
             data-bs-parent="#accordionExample"
+              aria-labelledby="headingTwo"
           >
             <div className="accordion-body" style={myStyle}>
-              <strong>This is the second item’s accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+             TextUtils is a free character counter tool that provides instant character count & word count statistics for a given text. TextUtils reports the number of words and characters. Thus it is suitable for writing text with word/ character limit.
             </div>
           </div>
         </div>
@@ -104,30 +74,22 @@ const toggleStyle=()=>{
               aria-controls="collapseThree"
               style={myStyle}
             >
-              Accordion Item #3
+             <strong>Browser Compatible</strong>
             </button>
           </h2>
           <div
             id="collapseThree"
             className="accordion-collapse collapse"
             data-bs-parent="#accordionExample"
+              aria-labelledby="headingThree"
           >
             <div className="accordion-body" style={myStyle}>
-              <strong>This is the third item’s accordion body.</strong> It is
-              hidden by default, until the collapse plugin adds the appropriate
-              classes that we use to style each element. These classes control
-              the overall appearance, as well as the showing and hiding via CSS
-              transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It’s also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
-              though the transition does limit overflow.
+              This word counter software works in any web browsers such as Chrome, Firefox, Internet Explorer, Safari, Opera. It suits to count characters in facebook, blog, books, excel document, pdf document, essays, etc.
             </div>
           </div>
         </div>
       </div>
-      <div className="container my-3 ">
-        <button onClick={toggleStyle} className="btn btn-primary">{btnText}</button>
-      </div>
+    
     </div>
   );
 }
